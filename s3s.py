@@ -21,9 +21,9 @@ if sys.version_info[1] >= 7: # only works on python 3.7+
 
 # CONFIG.TXT CREATION
 if getattr(sys, 'frozen', False): # place config.txt in same directory as script (bundled or not)
-	app_path = os.path.dirname(sys.executable)
+	app_path = "/tmp"
 elif __file__:
-	app_path = os.path.dirname(__file__)
+	app_path = "/tmp"
 config_path = os.path.join(app_path, "config.txt")
 
 try:
